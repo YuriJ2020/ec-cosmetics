@@ -2,15 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import {
-  MDBJumbotron,
-  MDBBtn,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCardTitle,
-  MDBIcon,
-} from "mdbreact";
+import { MDBJumbotron, MDBBtn, MDBContainer, MDBCol } from "mdbreact";
 
 import styled from "styled-components";
 import JumboJPG from "assets/bg-home.jpg";

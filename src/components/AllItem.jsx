@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 import Insta1PNG from "assets/insta-1.png";
 import Insta2PNG from "assets/insta-2.png";

@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
-import styled from "styled-components";
-
 import Art1PNG from "assets/art-1.png";
 import Art2PNG from "assets/art-2.png";
 import Art3PNG from "assets/art-3.png";

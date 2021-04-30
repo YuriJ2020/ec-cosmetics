@@ -4,7 +4,7 @@ import Jumbo from "components/Jumbo";
 import Concept from "components/Concept";
 import About from "components/About";
 import BestSeller from "components/BestSeller";
-import NewItem from "components/NewItem";
+import NewItems from "components/NewItems";
 import Info from "components/Info";
 import Sns from "components/Sns";
 import Footer from "components/Footer";
@@ -21,7 +21,7 @@ const CustomSwitch = () => (
         <Jumbo />
         <Concept />
         <BestSeller />
-        <NewItem />
+        <NewItems />
         <About />
         <Info />
         <Sns />
