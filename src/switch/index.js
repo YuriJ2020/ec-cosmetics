@@ -9,7 +9,7 @@ import Info from "components/Info";
 import Sns from "components/Sns";
 import Footer from "components/Footer";
 
-import AllItem from "components/AllItem";
+import AllItems from "components/AllItems";
 import ItemDetail from "components/ItemDetail";
 
 import NotFound from "components/NotFound";
@@ -27,10 +27,10 @@ const CustomSwitch = () => (
         <Sns />
         <Footer />
       </Route>
-      <Route path="/allitem">
-        <AllItem />
+      <Route path="/allitems">
+        <AllItems />
       </Route>
-      <Route path="/itemdetail">
+      <Route path="/itemdetail/:aid">
         <ItemDetail />
       </Route>
       <Route exact path="/notfound">

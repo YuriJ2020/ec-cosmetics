@@ -1,6 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+import styled from "styled-components";
 
 import { MDBBtn } from "mdbreact";
+
+const MDBBtnS = styled(MDBBtn)`
+  color: #908585;
+  background-color: white;
+  border: 2px solid #908585;
+  &:hover {
+    color: white;
+    background-color: #908585;
+    border: 2px solid #908585;
+  }
+`;
 
 const NewItemComponent = (props) => {
   return (
@@ -10,9 +24,9 @@ const NewItemComponent = (props) => {
       <p>
         {props.size} / {props.price}
       </p>
-      <MDBBtn outline color="blue-grey">
-        BUY
-      </MDBBtn>
+      <Link to="/allitems">
+        <MDBBtnS color="">BUY</MDBBtnS>
+      </Link>
     </>
   );
 };

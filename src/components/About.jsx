@@ -34,7 +34,7 @@ const MDBRowS = styled(MDBRow)`
 const About = () => {
   return (
     <>
-      <MDBContainerS fluid className="d-flex align-items-center blue-grey-text">
+      <MDBContainerS fluid className="d-flex align-items-center">
         <MDBRowS>
           <MDBCol xl="6" lg="12">
             <DivS className="border p-5">

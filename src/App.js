@@ -1,4 +1,4 @@
-import "App.css";
+import "App.scss";
 
 import CustomSwitch from "switch";
 import navBarWithSwitch from "components/NavBar";

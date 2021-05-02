@@ -15,7 +15,7 @@ import styled from "styled-components";
 const NewItem = () => {
   return (
     <>
-      <MDBContainer className="py-5 text-center blue-grey-text">
+      <MDBContainer className="py-5 text-center">
         <h2 className="responsive-h1 pb-4">New Items</h2>
         <h4 className="pb-3">Hand Wash Mist</h4>
         <MDBRow>

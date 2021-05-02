@@ -1,5 +1,5 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 
 import {
   MDBContainer,
@@ -17,8 +17,15 @@ import {
   MDBIcon,
 } from "mdbreact";
 
+import logoPNG from "assets/logo.png";
+
 const NavBar = (props) => {
   const { children } = props;
+
+  const [isWideEnough, setWideEnough] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleCollapse = () => setIsOpen(!isOpen);
+
   // state = {
   //   isOpen: false,
   // };
@@ -29,36 +36,43 @@ const NavBar = (props) => {
 
   return (
     <Router>
-      <MDBNavbar color="blue-grey" dark expand="md">
+      <MDBNavbar
+        color="bg-light"
+        fixed="top"
+        dark
+        expand="md"
+        scrolling
+        transparent
+      >
         <MDBNavbarBrand>
-          <strong className="white-text">Navbar</strong>
+          <MDBNavLink to="/">
+            <img src={logoPNG} className="img-fluid pl-5" alt="" />
+          </MDBNavLink>
         </MDBNavbarBrand>
-        <MDBNavbarToggler />
-        <MDBCollapse id="navbarCollapse3" navbar>
+        {!setWideEnough && <MDBNavbarToggler onClick={toggleCollapse} />}
+        <MDBCollapse id="navbarCollapse3" isOpen={isOpen} navbar>
           <MDBNavbarNav left>
             <MDBNavItem active>
-              <MDBNavLink to="#!">Home</MDBNavLink>
+              <MDBNavLink to="/">Home</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="#!">Features</MDBNavLink>
+              <MDBNavLink to="/allitems">All Items</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="#!">Pricing</MDBNavLink>
+              <MDBNavLink to="/about">About</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBDropdown>
                 <MDBDropdownToggle nav caret>
-                  <div className="d-none d-md-inline">Dropdown</div>
+                  <div className="d-none d-md-inline">Shipping Info</div>
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
+                  <MDBDropdownItem href="#!">Delivery</MDBDropdownItem>
+                  <MDBDropdownItem href="#!">FAQs</MDBDropdownItem>
                   <MDBDropdownItem href="#!">
-                    Something else here
+                    Terms & Conditions
                   </MDBDropdownItem>
-                  <MDBDropdownItem href="#!">
-                    Something else here
-                  </MDBDropdownItem>
+                  <MDBDropdownItem href="#!">Contact</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>
@@ -69,25 +83,14 @@ const NavBar = (props) => {
                 <MDBIcon fab icon="twitter" />
               </MDBNavLink>
             </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink className="waves-effect waves-light" to="#!">
-                <MDBIcon fab icon="google-plus-g" />
-              </MDBNavLink>
-            </MDBNavItem>
+
             <MDBNavItem>
               <MDBDropdown>
                 <MDBDropdownToggle nav caret>
-                  <MDBIcon icon="user" />
+                  <MDBIcon icon="shopping-cart" />
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">
-                    Something else here
-                  </MDBDropdownItem>
-                  <MDBDropdownItem href="#!">
-                    Something else here
-                  </MDBDropdownItem>
+                  <MDBDropdownItem href="#!">Cart: 3 Items</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>

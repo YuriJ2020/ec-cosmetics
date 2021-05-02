@@ -16,7 +16,7 @@ import Insta5PNG from "assets/insta-5.png";
 const Info = () => {
   return (
     <>
-      <MDBContainer className="py-5 blue-grey-text">
+      <MDBContainer className="py-5">
         {/* Article */}
         <h2 className="pb-4 text-center responsive-h1">Article</h2>
 

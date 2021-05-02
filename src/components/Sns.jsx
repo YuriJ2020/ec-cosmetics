@@ -1,29 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import styled from "styled-components";
+
 import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
+
+const MDBIconS = styled(MDBIcon)`
+  color: #908585;
+
+  &:hover {
+    color: #756d6d;
+  }
+`;
 
 const Sns = () => {
   return (
     <>
-      <MDBContainer className="text-center blue-grey-text">
+      <MDBContainer className="text-center">
         <MDBRow className="d-flex justify-content-center pb-3">
           <MDBCol lg="6" md="6" className="pb-4">
             <h2 className="py-3">Follow us</h2>
             <div className="d-flex justify-content-center">
-              <div className="p-2 text-left blue-grey-text">
+              <div className="p-2 text-left">
                 <Link to="/">
-                  <MDBIcon fab icon="twitter blue-grey-text" size="2x" />
+                  <MDBIconS fab icon="twitter" size="2x" />
                 </Link>
               </div>
               <div className="p-2 text-left">
                 <Link to="/">
-                  <MDBIcon fab icon="instagram blue-grey-text" size="2x" />
+                  <MDBIconS fab icon="instagram" size="2x" />
                 </Link>
               </div>
               <div className="p-2 text-left">
                 <Link to="/">
-                  <MDBIcon fab icon="facebook blue-grey-text" size="2x" />
+                  <MDBIconS fab icon="facebook" size="2x" />
                 </Link>
               </div>
             </div>

@@ -4,12 +4,10 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import styled from "styled-components";
 import ConceptPNG from "assets/concept.png";
 
-const MDBContainerS = styled(MDBContainer)``;
-
 const Concept = () => {
   return (
     <>
-      <MDBContainer className="py-5 blue-grey-text">
+      <MDBContainer className="py-5">
         <MDBRow className="d-flex align-items-center">
           <MDBCol lg="6">
             <h2 className="h1-responsive font-weight-bold pb-2">Our Concept</h2>

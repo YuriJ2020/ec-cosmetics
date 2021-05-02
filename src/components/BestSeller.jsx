@@ -5,12 +5,21 @@ import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import styled from "styled-components";
 import BestPNG from "assets/best.png";
 
-const MDBContainerS = styled(MDBContainer)``;
+const MDBBtnS = styled(MDBBtn)`
+  color: #908585;
+  background-color: white;
+  border: 2px solid #908585;
+  &:hover {
+    color: white;
+    background-color: #908585;
+    border: 2px solid #908585;
+  }
+`;
 
 const Concept = () => {
   return (
     <>
-      <MDBContainer className="py-5 blue-grey-text">
+      <MDBContainer className="py-5">
         <MDBRow className="d-flex align-items-center">
           <MDBCol lg="6">
             <img src={BestPNG} className="img-fluid" alt="" />
@@ -25,10 +34,8 @@ const Concept = () => {
               significant benefits when paired with time and dedication. Vitamin
               C is essential for enhancing the skin’s resilience.
             </h5>
-            <Link to="/allitem">
-              <MDBBtn outline color="blue-grey">
-                Check the Items
-              </MDBBtn>
+            <Link to="/allitems">
+              <MDBBtnS color="">Check the Items</MDBBtnS>
             </Link>
           </MDBCol>
         </MDBRow>

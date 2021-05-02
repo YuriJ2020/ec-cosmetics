@@ -24,7 +24,7 @@ const Jumbo = () => {
           <hr className="w-50 ml-0 white" />
           <h3>Organic Cosmetics from Austalia</h3>
           <p className="lead py-4">
-            <Link to="/allitem">
+            <Link to="/allitems">
               <MDBBtn outline color="white">
                 Check Products
               </MDBBtn>

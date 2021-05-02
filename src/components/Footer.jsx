@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
@@ -18,11 +19,31 @@ const Footer = () => {
         <div className="container pt-5">
           <img src={logoPNG} className="img-fluid py-5" alt="" />
           <MDBRow>
-            <MDBCol>About</MDBCol>
-            <MDBCol>Contact</MDBCol>
-            <MDBCol>Shipping Delivery</MDBCol>
-            <MDBCol>FAQs</MDBCol>
-            <MDBCol>Terms & Conditions</MDBCol>
+            <MDBCol>
+              <Link to="/about" className="white-text">
+                About
+              </Link>
+            </MDBCol>
+            <MDBCol>
+              <Link to="/contact" className="white-text">
+                Contact
+              </Link>
+            </MDBCol>
+            <MDBCol>
+              <Link to="/shipping" className="white-text">
+                Shipping Delivery
+              </Link>
+            </MDBCol>
+            <MDBCol>
+              <Link to="/faqs" className="white-text">
+                FAQs
+              </Link>
+            </MDBCol>
+            <MDBCol>
+              <Link to="/terms" className="white-text">
+                Terms & Conditions
+              </Link>
+            </MDBCol>
           </MDBRow>
           <hr className="white" />
           <p className="py-4">
