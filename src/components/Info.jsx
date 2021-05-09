@@ -67,37 +67,11 @@ const Info = () => {
             <hr />
           </div>
         </div>
-        {/* <MDBRow className="text-center m-0">
-          <MDBCol sm="4">
-            <img src={Art1PNG} className="img-fluid" alt="" />
-            <MDBRow>
-              <MDBCol>20 May 2021</MDBCol>
-              <MDBCol>Skin Care</MDBCol>
-            </MDBRow>
-            <p className="pt-2 text-left">Right way to wash your face</p>
-          </MDBCol>
-          <MDBCol sm="4">
-            <img src={Art2PNG} className="img-fluid" alt="" />
-            <MDBRow className="">
-              <MDBCol>20 May 2021</MDBCol>
-              <MDBCol>Skin Care</MDBCol>
-            </MDBRow>
-            <p className="pt-2 text-left">Right way to wash your face</p>
-          </MDBCol>
-          <MDBCol sm="4">
-            <img src={Art3PNG} className="img-fluid" alt="" />
-            <MDBRow className="">
-              <MDBCol>20 May 2021</MDBCol>
-              <MDBCol>Skin Care</MDBCol>
-            </MDBRow>
-            <p className="pt-2 text-left">Right way to wash your face</p>
-          </MDBCol>
-        </MDBRow> */}
 
         {/* Instagram */}
         <div className="text-center">
           <h2 className="responsive-h1 pt-5">Instagram</h2>
-          <h4 className="py-3">@Lils</h4>
+          <h5 className="py-3">@Lils</h5>
         </div>
 
         <div className="d-flex justify-content-center">
@@ -109,23 +83,6 @@ const Info = () => {
             <img src={Insta5PNG} className="img-fluid" alt="" className="m-1" />
           </div>
         </div>
-        {/* <MDBRow>
-          <MDBCol md="6" lg="2">
-            <img src={Insta1PNG} className="img-fluid" alt="" />
-          </MDBCol>
-          <MDBCol md="6" lg="2">
-            <img src={Insta2PNG} className="img-fluid" alt="" />
-          </MDBCol>
-          <MDBCol md="6" lg="2">
-            <img src={Insta3PNG} className="img-fluid" alt="" />
-          </MDBCol>
-          <MDBCol md="6" lg="2">
-            <img src={Insta4PNG} className="img-fluid" alt="" />
-          </MDBCol>
-          <MDBCol md="6" lg="2">
-            <img src={Insta5PNG} className="img-fluid" alt="" />
-          </MDBCol>
-        </MDBRow> */}
       </MDBContainer>
     </>
   );

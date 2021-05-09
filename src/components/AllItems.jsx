@@ -1,10 +1,18 @@
 import { React, useEffect } from "react";
+import { Link } from "react-router-dom";
+
+import styled from "styled-components";
+
 import _ from "lodash";
 
 import { getAllItems } from "../services/allItems";
 import AllItemsComponent from "./AllItemsComponent";
 
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
+
+const Hr = styled.hr`
+  height: 2rem;
+`;
 
 const AllItems = () => {
   useEffect(() => {
@@ -13,15 +21,31 @@ const AllItems = () => {
 
   return (
     <>
-      <MDBContainer className="text-center">
-        <h2 className="h1-responsive py-5">All Items</h2>
-        <MDBRow>
-          {_.map(getAllItems(), (a) => (
-            <MDBCol key={a._id}>
-              <AllItemsComponent key={a._id} {...a} />
-            </MDBCol>
-          ))}
-        </MDBRow>
+      <MDBContainer>
+        <div style={{ paddingTop: "10rem" }}>
+          <Link to="/" className="text-left" style={{ color: "#908585" }}>
+            <p>
+              <span>HOME</span>&nbsp;/&nbsp;<span>ALL ITEMS</span>
+            </p>
+          </Link>
+
+          <h3 className="h2-responsive pt-5">All Items</h3>
+          <Hr />
+          <MDBRow className="text-center">
+            {_.map(getAllItems(), (a) => (
+              <MDBCol key={a._id}>
+                <AllItemsComponent key={a._id} {...a} />
+              </MDBCol>
+            ))}
+          </MDBRow>
+          <div className="py-5 text-center">
+            <Link to="/">
+              <MDBBtn outline color="blue-grey">
+                Back to Home
+              </MDBBtn>
+            </Link>
+          </div>
+        </div>
       </MDBContainer>
     </>
   );

@@ -1,5 +1,5 @@
 {
-  "name": "ghibli-api",
+  "name": "ec-cosmetics",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,8 +10,10 @@
     "mdbreact": "^5.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-multi-carousel": "^2.6.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
+    "react-slick": "^0.28.1",
     "sass": "^1.32.12",
     "styled-components": "^5.2.1",
     "web-vitals": "^1.0.1"

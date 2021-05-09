@@ -1,5 +1,5 @@
 import { React, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import _ from "lodash";
 
@@ -26,8 +26,16 @@ const ItemDetail = () => {
 
   return (
     <>
-      <MDBContainer className="py-5">
+      <MDBContainer style={{ paddingTop: "10rem" }}>
         <MDBRow>
+          <MDBColS lg="6">
+            <img
+              src={item.img}
+              className="img-fluid"
+              alt=""
+              style={{ width: "26rem" }}
+            />
+          </MDBColS>
           <MDBCol lg="6" className="mx-auto">
             <h1 className="pb-5">{item.title}</h1>
             <h5 style={{ lineHeight: "2rem" }}>{item.desc}</h5>
@@ -55,10 +63,14 @@ const ItemDetail = () => {
               </MDBCol>
             </MDBRow>
           </MDBCol>
-          <MDBColS lg="6">
-            <img src={item.img} className="img-fluid" alt="" />
-          </MDBColS>
         </MDBRow>
+        <div className="text-center py-5">
+          <Link to="/">
+            <MDBBtn outline color="blue-grey">
+              Back to Home
+            </MDBBtn>
+          </Link>
+        </div>
       </MDBContainer>
     </>
   );

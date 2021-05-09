@@ -3,13 +3,24 @@ import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
-import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn } from "mdbreact";
+
+const MDBBtnS = styled(MDBBtn)`
+  color: #607d8b;
+  background-color: white;
+  border: 2px solid #607d8b;
+  &:hover {
+    color: white;
+    background-color: #607d8b;
+    border: 2px solid #607d8b;
+  }
+`;
 
 const MDBIconS = styled(MDBIcon)`
-  color: #908585;
+  color: #607d8b;
 
   &:hover {
-    color: #756d6d;
+    color: #4a606b;
   }
 `;
 
@@ -37,17 +48,7 @@ const Sns = () => {
                 </Link>
               </div>
             </div>
-            {/* <MDBRow>
-              <MDBCol>
-                <MDBIcon fab icon="twitter" size="2x" />
-              </MDBCol>
-              <MDBCol>
-                <MDBIcon fab icon="instagram" size="2x" />
-              </MDBCol>
-              <MDBCol>
-                <MDBIcon fab icon="facebook" size="2x" />
-              </MDBCol>
-            </MDBRow> */}
+            {/* Sign Form */}
           </MDBCol>
           <MDBCol lg="6" md="6">
             <h2 className="py-3">Keep in Touch</h2>
@@ -61,6 +62,11 @@ const Sns = () => {
                   placeholder="Enter email"
                 />
               </form>
+            </div>
+            <div className="py-3">
+              <MDBBtnS size="sm" color="">
+                Send
+              </MDBBtnS>
             </div>
           </MDBCol>
         </MDBRow>

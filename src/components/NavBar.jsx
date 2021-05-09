@@ -22,7 +22,7 @@ import logoPNG from "assets/logo.png";
 const NavBar = (props) => {
   const { children } = props;
 
-  const [isWideEnough, setWideEnough] = useState(false);
+  // const [isWideEnough, setWideEnough] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const toggleCollapse = () => setIsOpen(!isOpen);
 
@@ -37,7 +37,8 @@ const NavBar = (props) => {
   return (
     <Router>
       <MDBNavbar
-        color="bg-light"
+        color=""
+        style={{ backgroundColor: "#c9abab" }}
         fixed="top"
         dark
         expand="md"
@@ -49,8 +50,9 @@ const NavBar = (props) => {
             <img src={logoPNG} className="img-fluid pl-5" alt="" />
           </MDBNavLink>
         </MDBNavbarBrand>
-        {!setWideEnough && <MDBNavbarToggler onClick={toggleCollapse} />}
+        <MDBNavbarToggler onClick={toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={isOpen} navbar>
+          {/* isOpen={isOpen} */}
           <MDBNavbarNav left>
             <MDBNavItem active>
               <MDBNavLink to="/">Home</MDBNavLink>

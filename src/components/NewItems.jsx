@@ -17,7 +17,7 @@ const NewItem = () => {
     <>
       <MDBContainer className="py-5 text-center">
         <h2 className="responsive-h1 pb-4">New Items</h2>
-        <h4 className="pb-3">Hand Wash Mist</h4>
+        <h5 className="pb-5">Hand Wash Mist</h5>
         <MDBRow>
           {_.map(getNewItems(), (n) => (
             <MDBCol key={n._id} md="6" lg="3" className="pb-3">

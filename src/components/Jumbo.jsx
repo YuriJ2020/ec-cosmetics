@@ -18,8 +18,8 @@ const MDBContainerS = styled(MDBContainer)`
 const Jumbo = () => {
   return (
     <MDBContainerS fluid className="p-0 d-flex align-items-center white-text">
-      <MDBCol>
-        <MDBJumbotron className="bg-transparent shadow-none ">
+      <MDBCol className="pt-5">
+        <MDBJumbotron className="bg-transparent shadow-none">
           <h2 className="display-4">Hey Pink Lovers</h2>
           <hr className="w-50 ml-0 white" />
           <h3>Organic Cosmetics from Austalia</h3>

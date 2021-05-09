@@ -3,22 +3,22 @@ import { Link } from "react-router-dom";
 
 import _ from "lodash";
 
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBCardImage } from "mdbreact";
 
 const AllItemsComponent = (props) => {
   const detailsPath = `/itemdetail/${props._id}`;
 
   return (
     <>
-      <MDBContainer className="text-center">
+      <div>
         <Link to={detailsPath}>
-          <img src={props.img} className="img-fluid" alt="" className="p-2" />
+          <MDBCardImage src={props.img} alt="" className="mx-auto p-2" waves />
         </Link>
         <p className="">{props.title}</p>
         <p>
           {props.size} / {props.price}
         </p>
-      </MDBContainer>
+      </div>
     </>
   );
 };

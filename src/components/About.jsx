@@ -23,11 +23,14 @@ const H5 = styled.h5`
   @media (max-width: 576px) {
     font-size: 1rem;
   }
+  @media (min-width: 768px) {
+    line-height: 2.2rem;
+  }
 `;
 
 const MDBRowS = styled(MDBRow)`
   @media (min-width: 768px) {
-    margin: 3rem;
+    margin: 4rem;
   }
 `;
 
@@ -36,13 +39,13 @@ const About = () => {
     <>
       <MDBContainerS fluid className="d-flex align-items-center">
         <MDBRowS>
-          <MDBCol xl="6" lg="12">
+          <MDBCol xl="6" lg="12" className="mx-4">
             <DivS className="border p-5">
               <h2 className="h1-responsive py-3">About Us</h2>
 
               <H5
-                className=" h4-responsive text-justify"
-                style={{ lineHeight: "2rem" }}
+                className="text-justify"
+                // style={{ lineHeight: "2rem" }}
               >
                 Vitamin C is essential for enhancing the skin’s resilience.
                 Suited to use both morning and evening, this potent ingredient
