@@ -22,17 +22,8 @@ import logoPNG from "assets/logo.png";
 const NavBar = (props) => {
   const { children } = props;
 
-  // const [isWideEnough, setWideEnough] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const toggleCollapse = () => setIsOpen(!isOpen);
-
-  // state = {
-  //   isOpen: false,
-  // };
-
-  // toggleCollapse = () => {
-  //   this.setState({ isOpen: !this.state.isOpen });
-  // };
 
   return (
     <Router>

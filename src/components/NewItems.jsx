@@ -4,7 +4,7 @@ import _ from "lodash";
 import NewItemComponent from "./NewItemComponent";
 import { getNewItemsByID, getNewItems } from "../services/newItems";
 
-import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 import styled from "styled-components";
 // import NiaPNG from "assets/ni-a.png";

@@ -1,10 +1,8 @@
 import React from "react";
 
-// import Slider from "react-slick";
-
 import { Link } from "react-router-dom";
 
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBCardImage } from "mdbreact";
 
 import styled from "styled-components";
 
@@ -16,38 +14,9 @@ const MDBContainerS = styled(MDBContainer)`
 `;
 
 const Footer = () => {
-  // const simpleSlider = () => {
-  //   dots: true;
-  //   infinite: true;
-  //   speed: 500;
-  //   slidesToShow: 1;
-  //   slidesToScroll: 1;
-  // };
-
   return (
     <>
       <MDBContainerS fluid className="white-text py-3">
-        {/* <Slider {...simpleSlider}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider> */}
-
         <div className="container pt-5">
           <img src={logoPNG} className="img-fluid py-5" alt="" />
           <MDBRow>

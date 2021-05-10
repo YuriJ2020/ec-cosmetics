@@ -1,9 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Slider from "react-slick";
+
 import styled from "styled-components";
 
-import { MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn } from "mdbreact";
+import {
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBIcon,
+  MDBBtn,
+  MDBCardImage,
+} from "mdbreact";
+
+import Insta1PNG from "assets/insta-1.png";
+import Insta2PNG from "assets/insta-2.png";
+import Insta3PNG from "assets/insta-3.png";
+import Insta4PNG from "assets/insta-4.png";
+import Insta5PNG from "assets/insta-5.png";
 
 const MDBBtnS = styled(MDBBtn)`
   color: #607d8b;
@@ -25,6 +40,13 @@ const MDBIconS = styled(MDBIcon)`
 `;
 
 const Sns = () => {
+  const simpleSlider = {
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
   return (
     <>
       <MDBContainer className="text-center">
@@ -70,6 +92,55 @@ const Sns = () => {
             </div>
           </MDBCol>
         </MDBRow>
+
+        {/* Slider */}
+        <Slider {...simpleSlider} className="m-5">
+          <div>
+            <Link to="/">
+              <MDBCardImage src={Insta1PNG} alt="" className="mx-auto p-2" />
+            </Link>
+          </div>
+          <div>
+            <Link to="/">
+              <MDBCardImage
+                src={Insta2PNG}
+                alt=""
+                className="mx-auto p-2"
+                waves
+              />
+            </Link>
+          </div>
+          <div>
+            <Link to="/">
+              <MDBCardImage
+                src={Insta3PNG}
+                alt=""
+                className="mx-auto p-2"
+                waves
+              />
+            </Link>
+          </div>
+          <div>
+            <Link to="/">
+              <MDBCardImage
+                src={Insta4PNG}
+                alt=""
+                className="mx-auto p-2"
+                waves
+              />
+            </Link>
+          </div>
+          <div>
+            <Link to="/">
+              <MDBCardImage
+                src={Insta5PNG}
+                alt=""
+                className="mx-auto p-2"
+                waves
+              />
+            </Link>
+          </div>
+        </Slider>
       </MDBContainer>
     </>
   );
