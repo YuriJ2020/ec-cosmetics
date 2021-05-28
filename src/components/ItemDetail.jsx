@@ -26,7 +26,7 @@ const ItemDetail = () => {
 
   return (
     <>
-      <MDBContainer style={{ paddingTop: "10rem" }}>
+      <MDBContainer>
         <MDBRow>
           <MDBColS lg="6">
             <img

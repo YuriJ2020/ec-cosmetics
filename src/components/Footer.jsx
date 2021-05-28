@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import { MDBContainer, MDBRow, MDBCol, MDBCardImage } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 import styled from "styled-components";
 

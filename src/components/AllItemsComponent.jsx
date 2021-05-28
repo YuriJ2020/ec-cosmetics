@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import _ from "lodash";
-
 import { MDBCardImage } from "mdbreact";
 
 const AllItemsComponent = (props) => {

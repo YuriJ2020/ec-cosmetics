@@ -5,6 +5,8 @@ import Slider from "react-slick";
 
 import styled from "styled-components";
 
+import ScrollAnimation from "react-animate-on-scroll";
+
 import {
   MDBContainer,
   MDBRow,
@@ -46,102 +48,133 @@ const Sns = () => {
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <>
-      <MDBContainer className="text-center">
-        <MDBRow className="d-flex justify-content-center pb-3">
-          <MDBCol lg="6" md="6" className="pb-4">
-            <h2 className="py-3">Follow us</h2>
-            <div className="d-flex justify-content-center">
-              <div className="p-2 text-left">
-                <Link to="/">
-                  <MDBIconS fab icon="twitter" size="2x" />
-                </Link>
+      <ScrollAnimation
+        animateIn="fadeIn"
+        // initiallyVisible={true}
+        animateOnce={true}
+      >
+        <MDBContainer className="text-center">
+          <MDBRow className="d-flex justify-content-center pb-3">
+            <MDBCol lg="6" md="6" className="pb-4">
+              <h2 className="py-3">Follow us</h2>
+              <div className="d-flex justify-content-center">
+                <div className="p-2 text-left">
+                  <Link to="/">
+                    <MDBIconS fab icon="twitter" size="2x" />
+                  </Link>
+                </div>
+                <div className="p-2 text-left">
+                  <Link to="/">
+                    <MDBIconS fab icon="instagram" size="2x" />
+                  </Link>
+                </div>
+                <div className="p-2 text-left">
+                  <Link to="/">
+                    <MDBIconS fab icon="facebook" size="2x" />
+                  </Link>
+                </div>
               </div>
-              <div className="p-2 text-left">
-                <Link to="/">
-                  <MDBIconS fab icon="instagram" size="2x" />
-                </Link>
+              {/* Sign Form */}
+            </MDBCol>
+            <MDBCol lg="6" md="6">
+              <h2 className="py-3">Keep in Touch</h2>
+              <p>Join & Recieve member's benefits.</p>
+              <div className="d-flex justify-content-center">
+                <form>
+                  <input
+                    type="email"
+                    id="defaultFormLoginEmailEx"
+                    className="form-control"
+                    placeholder="Enter email"
+                  />
+                </form>
               </div>
-              <div className="p-2 text-left">
-                <Link to="/">
-                  <MDBIconS fab icon="facebook" size="2x" />
-                </Link>
+              <div className="py-3">
+                <MDBBtnS size="sm" color="">
+                  Send
+                </MDBBtnS>
               </div>
-            </div>
-            {/* Sign Form */}
-          </MDBCol>
-          <MDBCol lg="6" md="6">
-            <h2 className="py-3">Keep in Touch</h2>
-            <p>Join & Recieve member's benefits.</p>
-            <div className="d-flex justify-content-center">
-              <form>
-                <input
-                  type="email"
-                  id="defaultFormLoginEmailEx"
-                  className="form-control"
-                  placeholder="Enter email"
-                />
-              </form>
-            </div>
-            <div className="py-3">
-              <MDBBtnS size="sm" color="">
-                Send
-              </MDBBtnS>
-            </div>
-          </MDBCol>
-        </MDBRow>
+            </MDBCol>
+          </MDBRow>
 
-        {/* Slider */}
-        <Slider {...simpleSlider} className="m-5">
-          <div>
-            <Link to="/">
-              <MDBCardImage src={Insta1PNG} alt="" className="mx-auto p-2" />
-            </Link>
-          </div>
-          <div>
-            <Link to="/">
-              <MDBCardImage
-                src={Insta2PNG}
-                alt=""
-                className="mx-auto p-2"
-                waves
-              />
-            </Link>
-          </div>
-          <div>
-            <Link to="/">
-              <MDBCardImage
-                src={Insta3PNG}
-                alt=""
-                className="mx-auto p-2"
-                waves
-              />
-            </Link>
-          </div>
-          <div>
-            <Link to="/">
-              <MDBCardImage
-                src={Insta4PNG}
-                alt=""
-                className="mx-auto p-2"
-                waves
-              />
-            </Link>
-          </div>
-          <div>
-            <Link to="/">
-              <MDBCardImage
-                src={Insta5PNG}
-                alt=""
-                className="mx-auto p-2"
-                waves
-              />
-            </Link>
-          </div>
-        </Slider>
-      </MDBContainer>
+          {/* Slider */}
+          <Slider {...simpleSlider} className="m-5">
+            <div>
+              <Link to="/">
+                <MDBCardImage src={Insta1PNG} alt="" className="mx-auto p-2" />
+              </Link>
+            </div>
+            <div>
+              <Link to="/">
+                <MDBCardImage
+                  src={Insta2PNG}
+                  alt=""
+                  className="mx-auto p-2"
+                  waves
+                />
+              </Link>
+            </div>
+            <div>
+              <Link to="/">
+                <MDBCardImage
+                  src={Insta3PNG}
+                  alt=""
+                  className="mx-auto p-2"
+                  waves
+                />
+              </Link>
+            </div>
+            <div>
+              <Link to="/">
+                <MDBCardImage
+                  src={Insta4PNG}
+                  alt=""
+                  className="mx-auto p-2"
+                  waves
+                />
+              </Link>
+            </div>
+            <div>
+              <Link to="/">
+                <MDBCardImage
+                  src={Insta5PNG}
+                  alt=""
+                  className="mx-auto p-2"
+                  waves
+                />
+              </Link>
+            </div>
+          </Slider>
+        </MDBContainer>
+      </ScrollAnimation>
     </>
   );
 };

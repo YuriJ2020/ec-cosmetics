@@ -22,7 +22,7 @@ const AllItems = () => {
   return (
     <>
       <MDBContainer>
-        <div style={{ paddingTop: "10rem" }}>
+        <div>
           <Link to="/" className="text-left" style={{ color: "#908585" }}>
             <p>
               <span>HOME</span>&nbsp;/&nbsp;<span>ALL ITEMS</span>

@@ -60,12 +60,20 @@ const NavBar = (props) => {
                   <div className="d-none d-md-inline">Shipping Info</div>
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem href="#!">Delivery</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">FAQs</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">
-                    Terms & Conditions
-                  </MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Contact</MDBDropdownItem>
+                  <MDBNavLink to="/contact">
+                    <MDBDropdownItem tag="span">Delivery</MDBDropdownItem>
+                  </MDBNavLink>
+                  <MDBNavLink to="/fandq">
+                    <MDBDropdownItem tag="span">FAQs</MDBDropdownItem>
+                  </MDBNavLink>
+                  <MDBNavLink to="/contact">
+                    <MDBDropdownItem tag="span">
+                      Terms & Conditions
+                    </MDBDropdownItem>
+                  </MDBNavLink>
+                  <MDBNavLink to="/contact">
+                    <MDBDropdownItem tag="span">Contact</MDBDropdownItem>
+                  </MDBNavLink>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>

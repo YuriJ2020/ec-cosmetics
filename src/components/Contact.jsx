@@ -1,16 +1,7 @@
 import _ from "lodash";
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBBtn,
-  MDBIcon,
-  MDBInput,
-} from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon } from "mdbreact";
 import React, { useState } from "react";
 import styled from "styled-components";
-
-// import ChihiroBG from "../assets/chihirobg.png";
 
 import { addContact, getContact } from "../services/contact";
 
@@ -58,7 +49,7 @@ const Contact = () => {
   return (
     <>
       <div>
-        <MDBContainer className="pt-5">
+        <MDBContainer>
           <form
             className="needs-validation m-5"
             onSubmit={submitHandler}
