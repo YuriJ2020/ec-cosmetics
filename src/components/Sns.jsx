@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
+import request from "request";
 
 import Slider from "react-slick";
 
@@ -42,6 +44,8 @@ const MDBIconS = styled(MDBIcon)`
 `;
 
 const Sns = () => {
+  const [email, setEmail] = useState("");
+
   const simpleSlider = {
     dots: true,
     infinite: true,
@@ -114,11 +118,36 @@ const Sns = () => {
                     id="defaultFormLoginEmailEx"
                     className="form-control"
                     placeholder="Enter email"
+                    value={email}
+                    onChange={(e) => {
+                      const val = e.currentTarget.value;
+                      console.log("val:", val);
+                      setEmail(val);
+                    }}
                   />
                 </form>
               </div>
               <div className="py-3">
-                <MDBBtnS size="sm" color="">
+                <MDBBtnS
+                  size="sm"
+                  color=""
+                  onClick={(e) => {
+                    const postData = JSON.stringify({ email });
+                    const options = {
+                      url: "http://localhost:5000/signup",
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                      body: postData,
+                    };
+                    request(options, (err, response, body) => {
+                      console.log("error:", err);
+                      console.log("body:", body);
+                    });
+                    setEmail("");
+                  }}
+                >
                   Send
                 </MDBBtnS>
               </div>
