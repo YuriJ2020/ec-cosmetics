@@ -1,9 +1,19 @@
 import _ from "lodash";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon } from "mdbreact";
+import {
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBBtn,
+  MDBIcon,
+  MDBMask,
+  MDBView,
+} from "mdbreact";
 import React, { useState } from "react";
 import styled from "styled-components";
 
 import { addContact, getContact } from "../services/contact";
+
+import Title5PNG from "assets/bg-title5.png";
 
 const MDBBtnS = styled(MDBBtn)`
   color: #607d8b;
@@ -48,18 +58,26 @@ const Contact = () => {
 
   return (
     <>
-      <div>
+      <MDBContainer className="p-0" fluid>
+        <MDBView>
+          <img src={Title5PNG} className="img-fluid" alt="" />
+          <MDBMask className="flex-center" overlay="black-light">
+            <h1 className="font-weight-bold text-white">CONTACT</h1>
+          </MDBMask>
+        </MDBView>
         <MDBContainer>
           <form
             className="needs-validation m-5"
             onSubmit={submitHandler}
             noValidate
           >
-            <h1 className="pt-5">Contact Us</h1>
-            <hr />
-            <h5 className="py-4">
-              We will get back to you within 2 working days.
-            </h5>
+            <h4 className="py-3">
+              Our office is open from Monday - Friday 9am-5pm AEST.
+            </h4>
+
+            <p className="py-3">
+              Please allow 1-2 business days to receive a response.
+            </p>
             <MDBRow>
               <MDBCol md="6" className="mb-3">
                 <label
@@ -175,7 +193,7 @@ const Contact = () => {
             </div>
           </form>
         </MDBContainer>
-      </div>
+      </MDBContainer>
     </>
   );
 };

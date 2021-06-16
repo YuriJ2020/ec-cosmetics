@@ -6,7 +6,7 @@ import styled from "styled-components";
 import _ from "lodash";
 
 import { getAllItems } from "../services/allItems";
-import AllItemsComponent from "./AllItemsComponent";
+import AllItem from "./AllItem";
 
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 
@@ -34,7 +34,7 @@ const AllItems = () => {
           <MDBRow className="text-center">
             {_.map(getAllItems(), (a) => (
               <MDBCol key={a._id}>
-                <AllItemsComponent key={a._id} {...a} />
+                <AllItem key={a._id} {...a} />
               </MDBCol>
             ))}
           </MDBRow>

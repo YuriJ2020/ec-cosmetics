@@ -2,56 +2,142 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
 
 import styled from "styled-components";
 
-import logoPNG from "assets/logo.png";
+import LogoDSVG from "assets/logo-d.svg";
+
+const FooterContainer = styled.footer`
+  .footer-middle {
+    padding-top: 3rem;
+  }
+
+  .footer-bottom {
+    margin-top: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+`;
 
 const MDBContainerS = styled(MDBContainer)`
-  background: linear-gradient(to top, #c9abab, #eeeff0);
-  text-align: center;
+  background: linear-gradient(to top, #c9abab, white);
+`;
+
+const LinkS = styled(Link)`
+  color: #565d61;
+
+  &:hover {
+    color: #41474a;
+  }
+`;
+
+const MDBIconS = styled(MDBIcon)`
+  color: #607d8b;
+
+  &:hover {
+    color: #4a606b;
+  }
 `;
 
 const Footer = () => {
   return (
     <>
-      <MDBContainerS fluid className="white-text py-3">
-        <div className="container pt-5">
-          <img src={logoPNG} className="img-fluid py-5" alt="" />
-          <MDBRow>
-            <MDBCol>
-              <Link to="/about" className="white-text">
-                About
-              </Link>
-            </MDBCol>
-            <MDBCol>
-              <Link to="/contact" className="white-text">
-                Contact
-              </Link>
-            </MDBCol>
-            <MDBCol>
-              <Link to="/shipping" className="white-text">
-                Shipping Delivery
-              </Link>
-            </MDBCol>
-            <MDBCol>
-              <Link to="/faqs" className="white-text">
-                FAQs
-              </Link>
-            </MDBCol>
-            <MDBCol>
-              <Link to="/terms" className="white-text">
-                Terms & Conditions
-              </Link>
-            </MDBCol>
-          </MDBRow>
-          <hr className="white" />
-          <p className="py-4">
-            Copyright &copy;{new Date().getFullYear()}&nbsp; Lils
-          </p>
+      <FooterContainer>
+        <div className=" footer-middle">
+          <MDBContainerS fluid className="py-3">
+            <MDBRow className="justify-content-around">
+              <MDBCol md="2" sm="6">
+                <Link to="/">
+                  <img src={LogoDSVG} className="img-fluid my-2" alt="" />
+                </Link>
+              </MDBCol>
+              <MDBCol md="2" sm="6">
+                <ul className="list-unstyled">
+                  <h5 className="font-weight-bold pt-2">OUR OFFICE</h5>
+                  <hr />
+                  <li>
+                    <p className=""> 1 Organic Street, Melbourne VIC 3000</p>
+                  </li>
+                  <li>
+                    <LinkS to="/newitems">
+                      <p className="text-nowrap m-0">
+                        <MDBIcon icon="phone" />
+                        &nbsp; PHONE: 012-345-678
+                      </p>
+                    </LinkS>
+                  </li>
+                  <li>
+                    <LinkS to="/newitems">
+                      <p className="text-nowrap">
+                        <MDBIcon icon="envelope" />
+                        &nbsp; gradeorganics@cosmetics.com
+                      </p>
+                    </LinkS>
+                  </li>
+                  <li>
+                    <MDBRow>
+                      <MDBCol>
+                        <a target="_blank" href="https://twitter.com/?lang=en">
+                          <MDBIconS fab icon="twitter" size="2x" />
+                        </a>
+                      </MDBCol>
+                      <MDBCol>
+                        <a target="_blank" href="https://www.facebook.com/">
+                          <MDBIconS fab icon="facebook" size="2x" />
+                        </a>
+                      </MDBCol>
+                      <MDBCol>
+                        <a target="_blank" href="https://www.instagram.com/">
+                          <MDBIconS fab icon="instagram" size="2x" />
+                        </a>
+                      </MDBCol>
+                    </MDBRow>
+                  </li>
+                </ul>
+              </MDBCol>
+
+              <MDBCol md="2" sm="6">
+                <h5 className="font-weight-bold">SHOPPING</h5>
+                <hr />
+                <ul className="list-unstyled">
+                  <li>
+                    <LinkS to="/allitems">All Items</LinkS>
+                  </li>
+                  <li>
+                    <LinkS to="/newitems">New Items</LinkS>
+                  </li>
+                  <li>
+                    <LinkS to="/about">About</LinkS>
+                  </li>
+                </ul>
+              </MDBCol>
+              <MDBCol md="2" sm="6">
+                <h5 className="font-weight-bold">SHIPPING INFO</h5>
+                <hr />
+                <ul className="list-unstyled">
+                  <li>
+                    <LinkS to="/shipping">Delivery</LinkS>
+                  </li>
+                  <li>
+                    <LinkS to="/fandq">F & Q</LinkS>
+                  </li>
+                  <li>
+                    <LinkS to="/terms">Terms & Conditions</LinkS>
+                  </li>
+                  <li>
+                    <LinkS to="/contact">Contact</LinkS>
+                  </li>
+                </ul>
+              </MDBCol>
+            </MDBRow>
+            <hr className="white" />
+            <p className="py-4 text-white text-center">
+              Copyright &copy;{new Date().getFullYear()}&nbsp; Grade Organics
+            </p>
+          </MDBContainerS>
         </div>
-      </MDBContainerS>
+      </FooterContainer>
     </>
   );
 };

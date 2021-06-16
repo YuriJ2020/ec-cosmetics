@@ -3,27 +3,30 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import Jumbo from "components/Jumbo";
-import Concept from "components/Concept";
+import Video from "components/Video";
+import Lead from "components/Lead";
 import About from "components/About";
 import BestSeller from "components/BestSeller";
+import Categories from "components/Categories";
 
 import NewItems from "components/NewItems";
 import NewItemDetail from "components/NewItemDetail";
 
-import Shipping from "components/Shipping";
+import CleanCode from "components/CleanCode";
 
-import Info from "components/Info";
-import Sns from "components/Sns";
+import Instagram from "components/Instagram";
+import MailList from "components/MailList";
 import Footer from "components/Footer";
 
 import AllItems from "components/AllItems";
 import ItemDetail from "components/ItemDetail";
 
+import Shipping from "components/Shipping";
+
+import Terms from "components/Terms";
 import FandQ from "components/FandQ";
 
 import Contact from "components/Contact";
-
-import StoreLocation from "components/StoreLocation";
 
 import NotFound from "components/NotFound";
 
@@ -33,14 +36,18 @@ const CustomSwitch = () => (
       <Route exact path="/">
         <ScrollAnimation animateIn="fadeIn">
           <Jumbo />
-          <Concept />
+          <Lead />
+
+          <Categories />
+          <CleanCode />
+          <Video />
           <NewItems />
-          <BestSeller />
-          <Shipping />
-          <About />
-          <Info />
-          <Sns />
-          <Footer />
+
+          {/* <BestSeller /> */}
+          <MailList />
+
+          {/* <About /> */}
+          <Instagram />
         </ScrollAnimation>
       </Route>
 
@@ -56,15 +63,21 @@ const CustomSwitch = () => (
         </div>
       </Route>
 
-      <Route path="/storelocation">
-        <div style={{ paddingTop: "5rem" }}>
-          <StoreLocation />
+      <Route path="/terms">
+        <div style={{ paddingTop: "7rem" }}>
+          <Terms />
         </div>
       </Route>
 
       <Route path="/contact">
-        <div style={{ paddingTop: "3rem" }}>
+        <div style={{ paddingTop: "6rem" }}>
           <Contact />
+        </div>
+      </Route>
+
+      <Route path="/shipping">
+        <div style={{ paddingTop: "7rem" }}>
+          <Shipping />
         </div>
       </Route>
 
@@ -101,6 +114,7 @@ const CustomSwitch = () => (
         <Redirect to="/notfound" />
       </Route>
     </Switch>
+    <Footer />
   </>
 );
 

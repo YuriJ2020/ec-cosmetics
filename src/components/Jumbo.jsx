@@ -1,34 +1,54 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-
 import styled from "styled-components";
 
 import {
-  MDBBtn,
   MDBContainer,
   MDBCarousel,
   MDBCarouselInner,
   MDBCarouselItem,
   MDBView,
-  MDBCarouselCaption,
+  MDBMask,
+  MDBRow,
+  MDBCol,
+  MDBCardTitle,
+  MDBIcon,
+  MDBBtn,
 } from "mdbreact";
 
-import Car1PNG from "assets/bg-car1.png";
-import Car2PNG from "assets/bg-car2.png";
-import Car3PNG from "assets/bg-car3.png";
+import JumboPNG from "assets/bg-jumbo.png";
+import Jumbo2PNG from "assets/bg-jumbo2.png";
+import Jumbo3PNG from "assets/bg-jumbo3.png";
 
 const MDBContainerS = styled(MDBContainer)`
+  @media (min-width: 992px) {
+    padding-top: 3rem;
+  }
   @media (max-width: 992px) {
-    padding-top: 5rem;
+    padding-top: 3rem;
   }
 `;
 
-const MDBCarouselCaptionS = styled(MDBCarouselCaption)`
-  top: 40%;
-  left: -20%;
-  // transform: translateX(-40%);
-  // transform: translateY(-40%);
+const MDBCardTitleS = styled(MDBCardTitle)`
+  font-family: "Playfair Display", serif;
+`;
+
+const MDBColS = styled(MDBCol)`
+  @media (max-width: 992px) {
+  }
+`;
+
+const H4S = styled.h4`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const MDBMaskS = styled(MDBMask)`
+  @media (min-width: 768px) {
+    margin: 3rem 0;
+  }
 `;
 
 const Jumbo = () => {
@@ -39,62 +59,136 @@ const Jumbo = () => {
         length={3}
         showControls={false}
         showIndicators={true}
-        className="z-depth-1"
       >
         <MDBCarouselInner>
           <MDBCarouselItem itemId="1">
             <MDBView>
-              <img className="d-block w-100" src={Car1PNG} alt="First slide" />
+              <img
+                className="d-block img-fluid w-100"
+                src={Jumbo2PNG}
+                alt="Second slide"
+                style={{
+                  backgroundSize: " cover",
+                  minHeight: "42vh",
+                }}
+              />
+              <MDBMaskS
+                className="d-flex justify-content-start align-items-center text-white py-5 px-4"
+                overlay="black-slight"
+              >
+                <MDBRow>
+                  <MDBColS>
+                    <H4S className="mx-5 my-2">
+                      100% Natural Skin Enriching Makeup
+                    </H4S>
+                    <MDBCardTitleS className="h1-responsive pt-3 m-5 font-weight-bold">
+                      NATURAL FLAWLESS MAKEUP
+                    </MDBCardTitleS>
+                    <H4S className="mx-5 mb-5">
+                      More than just organic skin care products
+                    </H4S>
+                    <div className="m-5">
+                      <Link to="/allitems">
+                        <MDBBtn outline color="white">
+                          <MDBIcon icon="clone" className="mr-2"></MDBIcon>
+                          VIEW PRODUCTS
+                        </MDBBtn>
+                      </Link>
+                    </div>
+                  </MDBColS>
+                </MDBRow>
+              </MDBMaskS>
             </MDBView>
-            <MDBCarouselCaptionS>
-              <h1 className="h1-responsive py-2">World Winning Cosmetics</h1>
-              <h5>Organic Cosmetics from Down Under</h5>
-              <Link to="/allitems">
-                <div className="py-3">
-                  <MDBBtn outline color="white">
-                    Check Products
-                  </MDBBtn>
-                </div>
-              </Link>
-            </MDBCarouselCaptionS>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="2">
             <MDBView>
-              <img className="d-block w-100" src={Car2PNG} alt="Second slide" />
+              <img
+                className="d-block w-100"
+                src={JumboPNG}
+                alt="First slide"
+                style={{
+                  backgroundSize: " cover",
+                  minHeight: "42vh",
+                }}
+              />
+              <MDBMaskS
+                className="d-flex justify-content-start align-items-center text-white py-5 px-4"
+                overlay="black-slight"
+              >
+                <MDBRow>
+                  <MDBCol>
+                    <H4S className="mx-5 my-2">
+                      100% Natural Skin Enriching Makeup
+                    </H4S>
+                    <MDBCardTitleS className="h1-responsive pt-3 m-5 font-weight-bold">
+                      NATURAL FLAWLESS MAKEUP
+                    </MDBCardTitleS>
+                    <H4S className="mx-5 mb-5">
+                      More than just organic skin care products
+                    </H4S>
+                    <div className="m-5">
+                      <Link to="/allitems">
+                        <MDBBtn outline color="white">
+                          <MDBIcon icon="clone" className="mr-2"></MDBIcon>
+                          VIEW PRODUCTS
+                        </MDBBtn>
+                      </Link>
+                    </div>
+                  </MDBCol>
+                </MDBRow>
+              </MDBMaskS>
             </MDBView>
-            <MDBCarouselCaption className="mb-5">
-              <h1>screen 2</h1>
-            </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="3">
             <MDBView>
-              <img className="d-block w-100" src={Car3PNG} alt="Third slide" />
+              <img
+                className="d-block w-100"
+                src={Jumbo3PNG}
+                alt="Third slide"
+                style={{
+                  backgroundSize: " cover",
+                  minHeight: "42vh",
+                }}
+              />
+              <MDBMaskS
+                className="d-flex justify-content-end align-items-center text-white py-5 px-4"
+                overlay="black-slight"
+              >
+                <MDBRow>
+                  <MDBCol className="text-right">
+                    <H4S className="mx-5 my-2">
+                      100% Natural Skin Enriching Makeup
+                    </H4S>
+                    <MDBCardTitleS className="h1-responsive pt-3 m-5 font-weight-bold">
+                      NATURAL FLAWLESS MAKEUP
+                    </MDBCardTitleS>
+                    <H4S className="mx-5 mb-5">
+                      More than just organic skin care products
+                    </H4S>
+                    <div className="m-5">
+                      <Link to="/allitems">
+                        <MDBBtn outline color="white">
+                          <MDBIcon icon="clone" className="mr-2"></MDBIcon>
+                          VIEW PRODUCTS
+                        </MDBBtn>
+                      </Link>
+                    </div>
+                  </MDBCol>
+                </MDBRow>
+              </MDBMaskS>
             </MDBView>
-            <MDBCarouselCaption className="mb-5">
-              <h1>screen 3</h1>
-            </MDBCarouselCaption>
           </MDBCarouselItem>
         </MDBCarouselInner>
       </MDBCarousel>
     </MDBContainerS>
-
-    // <MDBContainerS fluid className="p-0 d-flex align-items-center white-text">
-    //   <MDBCol className="pt-5">
-    //     <MDBJumbotron className="bg-transparent shadow-none">
-    //       <h2 className="display-4">Hey Pink Lovers</h2>
-    //       <hr className="w-50 ml-0 white" />
-    //       <h3>Organic Cosmetics from Austalia</h3>
-    //       <p className="lead py-4">
-    //         <Link to="/allitems">
-    //           <MDBBtn outline color="white">
-    //             Check Products
-    //           </MDBBtn>
-    //         </Link>
-    //       </p>
-    //     </MDBJumbotron>
-    //   </MDBCol>
-    // </MDBContainerS>
   );
 };
 
 export default Jumbo;
+
+// d
+// #745454
+// #a45438
+// #c59c9c
+// #e6c2c2
+// l
