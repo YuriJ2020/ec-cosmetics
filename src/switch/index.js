@@ -6,11 +6,13 @@ import Jumbo from "components/Jumbo";
 import Video from "components/Video";
 import Lead from "components/Lead";
 import About from "components/About";
-import BestSeller from "components/BestSeller";
 import Categories from "components/Categories";
 
 import NewItems from "components/NewItems";
 import NewItemDetail from "components/NewItemDetail";
+
+import AllItems from "components/AllItems";
+import ItemDetail from "components/ItemDetail";
 
 import CleanCode from "components/CleanCode";
 
@@ -18,9 +20,7 @@ import Instagram from "components/Instagram";
 import MailList from "components/MailList";
 import Footer from "components/Footer";
 
-import AllItems from "components/AllItems";
-import ItemDetail from "components/ItemDetail";
-
+// 個ページ
 import Shipping from "components/Shipping";
 
 import Terms from "components/Terms";
@@ -37,16 +37,11 @@ const CustomSwitch = () => (
         <ScrollAnimation animateIn="fadeIn">
           <Jumbo />
           <Lead />
-
-          <Categories />
-          <CleanCode />
-          <Video />
           <NewItems />
-
-          {/* <BestSeller /> */}
+          <CleanCode />
+          <Categories />
+          <Video />
           <MailList />
-
-          {/* <About /> */}
           <Instagram />
         </ScrollAnimation>
       </Route>
@@ -106,7 +101,7 @@ const CustomSwitch = () => (
       </Route>
 
       <Route exact path="/notfound">
-        <div style={{ paddingTop: "6rem" }}>
+        <div style={{ paddingTop: "9rem" }}>
           <NotFound />
         </div>
       </Route>

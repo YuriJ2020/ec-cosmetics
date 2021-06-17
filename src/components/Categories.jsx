@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 
 import ScrollAnimation from "react-animate-on-scroll";
 
-import Cate1PNG from "assets/aaa.png";
-import Cate2PNG from "assets/bbb.png";
-import Cate3PNG from "assets/ccc.png";
-import Cate4PNG from "assets/ddd.png";
+import Cate1PNG from "assets/cate-1.png";
+import Cate2PNG from "assets/cate-2.png";
+import Cate3PNG from "assets/cate-3.png";
+import Cate4PNG from "assets/cate-4.png";
 
 const MDBRowS = styled(MDBRow)`
   @media (min-width: 992px) {
@@ -22,9 +22,10 @@ const MDBRowS = styled(MDBRow)`
 const Categories = () => {
   return (
     <>
-      <h2 className="text-center font-weight-bold py-5">
-        Choose by Categories
-      </h2>
+      <div className="text-center py-5">
+        <h5>Only Pure Natural Ingredients</h5>
+        <h2 className="py-3 font-weight-bold">CHOOSE BY CATEGORIES</h2>
+      </div>
       <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
         <MDBContainer className="text-center">
           <MDBRowS className="pb-5">
@@ -39,7 +40,6 @@ const Categories = () => {
               </Link>
             </MDBCol>
             <MDBCol>
-              {" "}
               <MDBView zoom className="w-100" waves>
                 <img src={Cate2PNG} className="img-fluid" alt="" />
                 <MDBMask className="flex-center" overlay="stylish-light">
@@ -49,7 +49,6 @@ const Categories = () => {
             </MDBCol>
             <div className="w-100"></div>
             <MDBCol>
-              {" "}
               <MDBView zoom className="w-100 mx-auto" waves>
                 <img src={Cate3PNG} className="img-fluid" alt="" />
                 <MDBMask className="flex-center" overlay="white-slight">
@@ -58,7 +57,6 @@ const Categories = () => {
               </MDBView>
             </MDBCol>
             <MDBCol>
-              {" "}
               <MDBView zoom className="w-100 mx-auto" waves>
                 <img src={Cate4PNG} className="img-fluid" alt="" />
 

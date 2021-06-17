@@ -8,11 +8,11 @@ import {
   MDBMask,
   MDBView,
 } from "mdbreact";
-import React, { useState } from "react";
-import styled from "styled-components";
+import { React, useEffect, useState } from "react";
 
 import { addContact, getContact } from "../services/contact";
 
+import styled from "styled-components";
 import Title5PNG from "assets/bg-title5.png";
 
 const MDBBtnS = styled(MDBBtn)`
@@ -27,6 +27,10 @@ const MDBBtnS = styled(MDBBtn)`
 `;
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");

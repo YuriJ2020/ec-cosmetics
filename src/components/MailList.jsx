@@ -2,29 +2,18 @@ import React, { useState } from "react";
 
 import request from "request";
 
-// import Slider from "react-slick";
-
 import { Parallax } from "react-parallax";
-
 import styled from "styled-components";
-
 import ScrollAnimation from "react-animate-on-scroll";
 
 import {
   MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBIcon,
   MDBBtn,
   MDBModal,
   MDBModalBody,
   MDBModalHeader,
   MDBModalFooter,
 } from "mdbreact";
-
-// import art1PNG from "assets/art-1.png";
-// import art2PNG from "assets/art-2.png";
-// import art3PNG from "assets/art-3.png";
 
 import BgMailPNG from "assets/bg-mail.png";
 
@@ -43,38 +32,6 @@ const MailList = () => {
   const [email, setEmail] = useState("");
   const [modal, setModal] = useState(false);
 
-  // const simpleSlider = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 300,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 3,
-  //         infinite: true,
-  //         dots: true,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 600,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  // };
   return (
     <>
       <ScrollAnimation
@@ -91,7 +48,7 @@ const MailList = () => {
         >
           <MDBContainer className="text-center py-5">
             {/* Sign Form */}
-            <h2 className="py-3 font-weight-bold">Stay in the Loop!</h2>
+            <h2 className="py-3 font-weight-bold">STAY IN THE LOOP!</h2>
             <h4 className="py-2">Join & Recieve member's benefits.</h4>
             <div>
               <p className="m-0">
@@ -143,61 +100,14 @@ const MailList = () => {
               </MDBBtnS>
             </div>
 
-            {/* Slider */}
-            {/* <Slider {...simpleSlider} className="m-5">
-            <div>
-              <Link to="/">
-                <MDBCardImage src={art1PNG} alt="" className="mx-auto p-2" />
-              </Link>
-            </div>
-            <div>
-              <Link to="/">
-                <MDBCardImage
-                  src={art2PNG}
-                  alt=""
-                  className="mx-auto p-2"
-                  waves
-                />
-              </Link>
-            </div>
-            <div>
-              <Link to="/">
-                <MDBCardImage
-                  src={art3PNG}
-                  alt=""
-                  className="mx-auto p-2"
-                  waves
-                />
-              </Link>
-            </div>
-            <div>
-              <Link to="/">
-                <MDBCardImage
-                  src={art1PNG}
-                  alt=""
-                  className="mx-auto p-2"
-                  waves
-                />
-              </Link>
-            </div>
-            <div>
-              <Link to="/">
-                <MDBCardImage
-                  src={art2PNG}
-                  alt=""
-                  className="mx-auto p-2"
-                  waves
-                />
-              </Link>
-            </div>
-          </Slider> */}
-
             {/* Modal */}
             <MDBModal isOpen={modal} toggle={() => setModal(!modal)} centered>
               <MDBModalHeader toggle={() => setModal(!modal)}>
-                MDBModal title
+                Signup Sucess
               </MDBModalHeader>
-              <MDBModalBody></MDBModalBody>
+              <MDBModalBody>
+                <div>Thank you for your Sign Up!</div>
+              </MDBModalBody>
               <MDBModalFooter>
                 <MDBBtn color="secondary" onClick={() => setModal(!modal)}>
                   Close

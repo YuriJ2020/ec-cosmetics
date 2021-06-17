@@ -13,7 +13,6 @@ import {
   MDBRow,
   MDBCol,
   MDBCardTitle,
-  MDBIcon,
   MDBBtn,
 } from "mdbreact";
 
@@ -32,11 +31,6 @@ const MDBContainerS = styled(MDBContainer)`
 
 const MDBCardTitleS = styled(MDBCardTitle)`
   font-family: "Playfair Display", serif;
-`;
-
-const MDBColS = styled(MDBCol)`
-  @media (max-width: 992px) {
-  }
 `;
 
 const H4S = styled.h4`
@@ -77,12 +71,12 @@ const Jumbo = () => {
                 overlay="black-slight"
               >
                 <MDBRow>
-                  <MDBColS>
+                  <MDBCol>
                     <H4S className="mx-5 my-2">
                       100% Natural Skin Enriching Makeup
                     </H4S>
                     <MDBCardTitleS className="h1-responsive pt-3 m-5 font-weight-bold">
-                      NATURAL FLAWLESS MAKEUP
+                      BEWDY ORGANICS AUSTRALIA
                     </MDBCardTitleS>
                     <H4S className="mx-5 mb-5">
                       More than just organic skin care products
@@ -90,12 +84,11 @@ const Jumbo = () => {
                     <div className="m-5">
                       <Link to="/allitems">
                         <MDBBtn outline color="white">
-                          <MDBIcon icon="clone" className="mr-2"></MDBIcon>
                           VIEW PRODUCTS
                         </MDBBtn>
                       </Link>
                     </div>
-                  </MDBColS>
+                  </MDBCol>
                 </MDBRow>
               </MDBMaskS>
             </MDBView>
@@ -121,7 +114,7 @@ const Jumbo = () => {
                       100% Natural Skin Enriching Makeup
                     </H4S>
                     <MDBCardTitleS className="h1-responsive pt-3 m-5 font-weight-bold">
-                      NATURAL FLAWLESS MAKEUP
+                      BEWDY ORGANICS AUSTRALIA
                     </MDBCardTitleS>
                     <H4S className="mx-5 mb-5">
                       More than just organic skin care products
@@ -129,7 +122,6 @@ const Jumbo = () => {
                     <div className="m-5">
                       <Link to="/allitems">
                         <MDBBtn outline color="white">
-                          <MDBIcon icon="clone" className="mr-2"></MDBIcon>
                           VIEW PRODUCTS
                         </MDBBtn>
                       </Link>
@@ -160,7 +152,7 @@ const Jumbo = () => {
                       100% Natural Skin Enriching Makeup
                     </H4S>
                     <MDBCardTitleS className="h1-responsive pt-3 m-5 font-weight-bold">
-                      NATURAL FLAWLESS MAKEUP
+                      BEWDY ORGANICS AUSTRALIA
                     </MDBCardTitleS>
                     <H4S className="mx-5 mb-5">
                       More than just organic skin care products
@@ -168,7 +160,6 @@ const Jumbo = () => {
                     <div className="m-5">
                       <Link to="/allitems">
                         <MDBBtn outline color="white">
-                          <MDBIcon icon="clone" className="mr-2"></MDBIcon>
                           VIEW PRODUCTS
                         </MDBBtn>
                       </Link>
@@ -185,10 +176,3 @@ const Jumbo = () => {
 };
 
 export default Jumbo;
-
-// d
-// #745454
-// #a45438
-// #c59c9c
-// #e6c2c2
-// l

@@ -12,7 +12,7 @@ const AllItem = (props) => {
         <Link to={detailsPath}>
           <MDBCardImage src={props.img} alt="" className="mx-auto p-2" waves />
         </Link>
-        <p className="">{props.title}</p>
+        <p>{props.title}</p>
         <p>
           {props.size} / {props.price}
         </p>

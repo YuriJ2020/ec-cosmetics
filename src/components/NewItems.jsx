@@ -2,30 +2,46 @@ import React from "react";
 import _ from "lodash";
 
 import NewItem from "./NewItem";
-import { getNewItems } from "../services/newItems";
+import { getNewItems1 } from "../services/newItems1";
+import { getNewItems2 } from "../services/newItems2";
 
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { Container, Carousel, Row, Col } from "react-bootstrap";
 
 import ScrollAnimation from "react-animate-on-scroll";
 
 const NewItems = () => {
   return (
     <>
-      <MDBContainer className="py-5 text-center">
+      <Container className="py-5 text-center">
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-          <h2 className="responsive-h1 py-4 font-weight-bold">New Items</h2>
-          <h5 className="pb-2">ORGANIC OILS</h5>
+          <h5 className="pb-2">The Best in Bewdy</h5>
+          <h2 className="responsive-h1 py-3 font-weight-bold">
+            OUR BEST SELLERS
+          </h2>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-          <MDBRow>
-            {_.map(getNewItems(), (n) => (
-              <MDBCol key={n._id} lg="3" md="3" sm="6" className="pb-3">
-                <NewItem key={n._id} {...n} />
-              </MDBCol>
-            ))}
-          </MDBRow>
+          <Carousel className="p-5">
+            <Carousel.Item>
+              <Row>
+                {_.map(getNewItems1(), (n) => (
+                  <Col key={n._id} className="pb-3 mx-auto">
+                    <NewItem key={n._id} {...n} />
+                  </Col>
+                ))}
+              </Row>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Row>
+                {_.map(getNewItems2(), (n) => (
+                  <Col key={n._id} className="pb-3 mx-auto">
+                    <NewItem key={n._id} {...n} />
+                  </Col>
+                ))}
+              </Row>
+            </Carousel.Item>
+          </Carousel>
         </ScrollAnimation>
-      </MDBContainer>
+      </Container>
     </>
   );
 };

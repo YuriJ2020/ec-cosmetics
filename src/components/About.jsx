@@ -1,8 +1,7 @@
-import React from "react";
+import { React, useEffect } from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBMask, MDBView } from "mdbreact";
 
 import ScrollAnimation from "react-animate-on-scroll";
-import styled from "styled-components";
 import { Parallax } from "react-parallax";
 
 import Title4PNG from "assets/bg-title4.png";
@@ -15,23 +14,15 @@ import IconCSVG from "assets/icon-c.svg";
 import IconOSVG from "assets/icon-o.svg";
 import IconGSVG from "assets/icon-g.svg";
 
-import BgMailPNG from "assets/bg-mail.png";
-
-const MDBContainerS = styled(MDBContainer)``;
-
-const ImgS = styled.img``;
-
-const MDBRowS = styled(MDBRow)`
-  // @media (min-width: 768px) {
-  //   margin: 4rem;
-  // }
-`;
-
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-        <MDBContainerS className="p-0" fluid>
+        <MDBContainer className="p-0" fluid>
           <MDBView>
             <img src={Title4PNG} className="img-fluid w-100" alt="" />
             <MDBMask className="flex-center" overlay="black-light">
@@ -39,8 +30,8 @@ const About = () => {
             </MDBMask>
           </MDBView>
           <MDBContainer>
-            <h2 className="font-weight-bold text-center py-5">About Us</h2>
-            <p>
+            <h2 className="font-weight-bold text-center pt-5">About Us</h2>
+            <p className="py-5">
               We know skincare goes beyond skin deep so we are here to address
               your skin concerns, whatever they may be. For us it’s all about
               getting better skin by doing the least harm possible. We stand for
@@ -51,12 +42,12 @@ const About = () => {
               if you have something to say, we want to hear it.
             </p>
 
-            <MDBRowS>
+            <MDBRow>
               <MDBCol
                 md="4"
                 className="d-flex flex-column justify-content-center"
               >
-                <h3 className="font-weight-bold">Science</h3>
+                <h2 className="font-weight-bold">Science</h2>
                 <p>
                   At Facetheory, nature meets science to transform skin for the
                   better. We’re big fans of botanical extracts, especially where
@@ -70,21 +61,21 @@ const About = () => {
               </MDBCol>
 
               <MDBCol size="6" md="8">
-                <ImgS src={LeftPNG} alt="" className="img-fluid w-100" />
+                <img src={LeftPNG} alt="" className="img-fluid w-100" />
               </MDBCol>
-            </MDBRowS>
+            </MDBRow>
 
-            <MDBRowS className="py-5">
+            <MDBRow className="py-5">
               <MDBCol size="6" md="8">
-                <ImgS src={RightPNG} alt="" className="img-fluid w-100" />
+                <img src={RightPNG} alt="" className="img-fluid w-100" />
               </MDBCol>
               <MDBCol
                 md="4"
                 className="d-flex flex-column justify-content-center"
               >
-                <h3 className="font-weight-bold">
+                <h2 className="font-weight-bold">
                   Sustainability And The Planet
-                </h3>
+                </h2>
                 <p>
                   Since Facetheory began, our founders and staff have always put
                   sustainability and the planet above anything else. We’re
@@ -95,26 +86,26 @@ const About = () => {
                   the
                 </p>
               </MDBCol>
-            </MDBRowS>
-            <MDBRowS className="text-center m-5">
+            </MDBRow>
+            <MDBRow className="text-center m-5">
               <MDBCol>
-                <ImgS src={IconVSVG} className="img-fluid w-50" alt="" />
+                <img src={IconVSVG} className="img-fluid w-50" alt="" />
                 <h5 className="py-4 font-weight-bold">VEGAN</h5>
               </MDBCol>
 
               <MDBCol>
-                <ImgS src={IconCSVG} className="img-fluid w-50" alt="" />
+                <img src={IconCSVG} className="img-fluid w-50" alt="" />
                 <h5 className="py-4 font-weight-bold">CRUELTY FREE</h5>
               </MDBCol>
               <MDBCol>
-                <ImgS src={IconOSVG} className="img-fluid w-50" alt="" />
+                <img src={IconOSVG} className="img-fluid w-50" alt="" />
                 <h5 className="py-4 font-weight-bold">100% ORGANIC</h5>
               </MDBCol>
               <MDBCol>
-                <ImgS src={IconGSVG} className="img-fluid w-50" alt="" />
+                <img src={IconGSVG} className="img-fluid w-50" alt="" />
                 <h5 className="py-4 font-weight-bold">GMO FREE</h5>
               </MDBCol>
-            </MDBRowS>
+            </MDBRow>
           </MDBContainer>
 
           <Parallax
@@ -124,7 +115,7 @@ const About = () => {
             strength={240}
             className="p-5"
           >
-            <MDBContainer>
+            <MDBContainer className="p-5">
               <h4 className="m-5 text-white" style={{ lineHeight: "2rem" }}>
                 With 70+ stores in Japan & the United States, and available in
                 40 other countries worldwide, we at John Masters Organics do our
@@ -133,7 +124,7 @@ const About = () => {
               </h4>
             </MDBContainer>
           </Parallax>
-        </MDBContainerS>
+        </MDBContainer>
       </ScrollAnimation>
     </>
   );

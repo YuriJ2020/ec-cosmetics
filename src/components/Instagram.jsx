@@ -1,11 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import { MDBContainer } from "mdbreact";
 
-// import Art1PNG from "assets/art-1.png";
-// import Art2PNG from "assets/art-2.png";
-// import Art3PNG from "assets/art-3.png";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -21,68 +17,11 @@ const IframeS = styled.iframe`
 const Instagram = () => {
   return (
     <>
-      <ScrollAnimation
-        animateIn="fadeIn"
-        // initiallyVisible={true}
-        animateOnce={true}
-      >
+      <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
         <MDBContainer fluid className="p-0">
-          {/* Article */}
-          {/* <h2 className="pb-4 text-center responsive-h1">Article</h2>
-
-          <div className="d-flex justify-content-between flex-wrap">
-            <div className="p-2 text-left mx-auto">
-              <Link to="/">
-                <img src={Art1PNG} className="img-fluid" alt="" />
-              </Link>
-              <div className="d-flex justify-content-between">
-                <div>
-                  <p>20 May 2021</p>
-                </div>
-                <div>
-                  <p>Skin Care</p>
-                </div>
-              </div>
-              <p className="pt-2 text-left">Right way to wash your face</p>
-              <hr />
-            </div>
-            <div className="p-2 text-left mx-auto">
-              <Link to="/">
-                <img src={Art2PNG} className="img-fluid" alt="" />
-              </Link>
-              <div className="d-flex justify-content-between">
-                <div>
-                  <p>20 May 2021</p>
-                </div>
-                <div>
-                  <p>Skin Care</p>
-                </div>
-              </div>
-              <p className="pt-2 text-left">Right way to wash your face</p>
-              <hr />
-            </div>
-            <div className="p-2 text-left mx-auto">
-              <Link to="/">
-                <img src={Art3PNG} className="img-fluid" alt="" />
-              </Link>
-              <div className="d-flex justify-content-between">
-                <div>
-                  <p>20 May 2021</p>
-                </div>
-                <div>
-                  <p>Skin Care</p>
-                </div>
-              </div>
-              <p className="pt-2 text-left">Right way to wash your face</p>
-              <hr />
-            </div>
-          </div> */}
-
-          {/* Instagram */}
-
-          <div className="text-center">
-            <h2 className="responsive-h1 pt-5">Follow Us on instagram.</h2>
-            <h5 className="py-3">@gradeorganics</h5>
+          <div className="text-center py-5">
+            <h5>Follow Us on Instagram</h5>
+            <h2 className="responsive-h1 pt-2">#BEWDYORGANICS</h2>
           </div>
 
           <div className="p-0 m-0">

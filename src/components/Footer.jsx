@@ -1,11 +1,9 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-
 import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
 
 import styled from "styled-components";
-
 import LogoDSVG from "assets/logo-d.svg";
 
 const FooterContainer = styled.footer`
@@ -54,13 +52,13 @@ const Footer = () => {
               </MDBCol>
               <MDBCol md="2" sm="6">
                 <ul className="list-unstyled">
-                  <h5 className="font-weight-bold pt-2">OUR OFFICE</h5>
+                  <h5 className="pt-2">OUR OFFICE</h5>
                   <hr />
                   <li>
-                    <p className=""> 1 Organic Street, Melbourne VIC 3000</p>
+                    <p> 1 Organic Street, Melbourne VIC 3000</p>
                   </li>
                   <li>
-                    <LinkS to="/newitems">
+                    <LinkS to="/">
                       <p className="text-nowrap m-0">
                         <MDBIcon icon="phone" />
                         &nbsp; PHONE: 012-345-678
@@ -68,10 +66,10 @@ const Footer = () => {
                     </LinkS>
                   </li>
                   <li>
-                    <LinkS to="/newitems">
+                    <LinkS to="/">
                       <p className="text-nowrap">
                         <MDBIcon icon="envelope" />
-                        &nbsp; gradeorganics@cosmetics.com
+                        &nbsp; bewdyorganics@cosmetics.com
                       </p>
                     </LinkS>
                   </li>
@@ -98,14 +96,14 @@ const Footer = () => {
               </MDBCol>
 
               <MDBCol md="2" sm="6">
-                <h5 className="font-weight-bold">SHOPPING</h5>
+                <h5>SHOPPING</h5>
                 <hr />
                 <ul className="list-unstyled">
                   <li>
                     <LinkS to="/allitems">All Items</LinkS>
                   </li>
                   <li>
-                    <LinkS to="/newitems">New Items</LinkS>
+                    <LinkS to="/allitems">New Items</LinkS>
                   </li>
                   <li>
                     <LinkS to="/about">About</LinkS>
@@ -113,7 +111,7 @@ const Footer = () => {
                 </ul>
               </MDBCol>
               <MDBCol md="2" sm="6">
-                <h5 className="font-weight-bold">SHIPPING INFO</h5>
+                <h5>SHIPPING INFO</h5>
                 <hr />
                 <ul className="list-unstyled">
                   <li>
@@ -132,8 +130,8 @@ const Footer = () => {
               </MDBCol>
             </MDBRow>
             <hr className="white" />
-            <p className="py-4 text-white text-center">
-              Copyright &copy;{new Date().getFullYear()}&nbsp; Grade Organics
+            <p className="py-4 text-white text-center font-weight-bold">
+              Copyright &copy;{new Date().getFullYear()}&nbsp; Bewdy Organics
             </p>
           </MDBContainerS>
         </div>
@@ -141,5 +139,4 @@ const Footer = () => {
     </>
   );
 };
-
 export default Footer;

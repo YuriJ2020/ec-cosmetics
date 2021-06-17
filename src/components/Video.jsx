@@ -17,7 +17,7 @@ const Video = () => {
             height="100%"
             controls={false}
             muted={true}
-            playing={true}
+            playing={false}
             loop={true}
           />
         </MDBContainer>

@@ -1,15 +1,14 @@
-import React from "react";
+import { React, useEffect } from "react";
 
 import { Accordion, Card, Button, Container } from "react-bootstrap";
 import { MDBMask, MDBView } from "mdbreact";
 
-import TitlePNG from "assets/bg-title.png";
-import Title2PNG from "assets/bg-title2.png";
 import Title3PNG from "assets/bg-title3.png";
 
-import styled from "styled-components";
-
 const FandQ = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Container className="p-0" fluid>
       <MDBView>
@@ -31,13 +30,13 @@ const FandQ = () => {
                 style={{ color: "#607d8b" }}
                 className="px-0"
               >
-                <h5>When was Grade Organic was founded?</h5>
+                <h5>When was Bewdy Organic was founded?</h5>
               </Accordion.Toggle>
             </Card.Header>
             <Accordion.Collapse eventKey="0">
               <Card.Body>
                 <p>
-                  Grade Organic was founded in 2006. The skincare line was
+                  Bewdy Organic was founded in 2006. The skincare line was
                   officially launched to the Australian market in late November
                   2009, the United States in May 2017, and globally throughout
                   2018 and 2019.
@@ -56,14 +55,14 @@ const FandQ = () => {
                 style={{ color: "#607d8b" }}
               >
                 <h5>
-                  Where are Grade Organics products made and manufactured?
+                  Where are Bewdy Organics products made and manufactured?
                 </h5>
               </Accordion.Toggle>
             </Card.Header>
             <Accordion.Collapse eventKey="1">
               <Card.Body>
                 <p>
-                  Grade Organics continually sources the highest quality, finest
+                  Bewdy Organics continually sources the highest quality, finest
                   ingredients for our products from around the world.
                 </p>
               </Card.Body>
@@ -80,13 +79,13 @@ const FandQ = () => {
                 style={{ color: "#607d8b" }}
               >
                 <h5>
-                  Where are Grade Organics products made and manufactured?
+                  Where are Bewdy Organics products made and manufactured?
                 </h5>
               </Accordion.Toggle>
             </Card.Header>
             <Accordion.Collapse eventKey="2">
               <Card.Body>
-                Grade Organics continually sources the highest quality, finest
+                Bewdy Organics continually sources the highest quality, finest
                 ingredients for our products from around the world.
               </Card.Body>
             </Accordion.Collapse>
@@ -106,7 +105,7 @@ const FandQ = () => {
             </Card.Header>
             <Accordion.Collapse eventKey="3">
               <Card.Body>
-                Grade Organics offers free shipping on all US website orders
+                Bewdy Organics offers free shipping on all US website orders
                 over $25. No promotion code is required and free shipping credit
                 will be added automatically when $25+ is added to the cart. For
                 orders under $25, a flat shipping fee of $5 will be applied at

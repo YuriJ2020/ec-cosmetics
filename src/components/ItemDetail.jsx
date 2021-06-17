@@ -2,18 +2,9 @@ import { React, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import _ from "lodash";
-
 import { getAllItemsByID } from "../services/allItems";
 
-import styled from "styled-components";
-
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
-
-const MDBColS = styled(MDBCol)`
-  // @media (max-width: 576px) {
-  //   order: first;
-  // }
-`;
 
 const ItemDetail = () => {
   const params = useParams();
@@ -28,14 +19,14 @@ const ItemDetail = () => {
     <>
       <MDBContainer>
         <MDBRow>
-          <MDBColS lg="6">
+          <MDBCol lg="6">
             <img
               src={item.img}
               className="img-fluid"
               alt=""
               style={{ width: "26rem" }}
             />
-          </MDBColS>
+          </MDBCol>
           <MDBCol lg="6" className="mx-auto">
             <h1 className="pb-5">{item.title}</h1>
             <h5 style={{ lineHeight: "2rem" }}>{item.desc}</h5>
@@ -44,9 +35,7 @@ const ItemDetail = () => {
               <MDBCol>
                 {item.size} / {item.price}
               </MDBCol>
-              {/* <MDBCol>{item.desc}</MDBCol> */}
             </MDBRow>
-
             <MDBRow>
               <MDBCol>
                 <MDBBtn outline color="blue-grey">

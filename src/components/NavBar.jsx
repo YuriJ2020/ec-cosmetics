@@ -19,7 +19,7 @@ import {
   MDBIcon,
 } from "mdbreact";
 
-import Logo2SVG from "assets/logo2.svg";
+import navLogoSVG from "assets/nav-logo.svg";
 
 const MDBNavbarNavS = styled(MDBNavbarNav)`
   letter-spacing: 0.2em;
@@ -53,7 +53,10 @@ const NavBar = (props) => {
         >
           <MDBNavbarToggler onClick={toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={isOpen} navbar>
-            <MDBNavbarNavS className="d-flex align-items-center">
+            <MDBNavbarNavS className="d-flex align-items-center ml-5">
+              <MDBNavItem>
+                <MDBNavLink to="/">HOME</MDBNavLink>
+              </MDBNavItem>
               <MDBNavItem>
                 <MDBNavLink to="/allitems">HAIR</MDBNavLink>
               </MDBNavItem>
@@ -63,12 +66,10 @@ const NavBar = (props) => {
               <MDBNavItem>
                 <MDBNavLink to="/allitems">BODY</MDBNavLink>
               </MDBNavItem>
-              <MDBNavItem>
-                <MDBNavLink to="/allitems">OTHER</MDBNavLink>
-              </MDBNavItem>
+
               <MDBNavbarBrand>
                 <MDBNavLinkS to="/">
-                  <img src={Logo2SVG} className="img-fluid" alt="" />
+                  <img src={navLogoSVG} className="img-fluid" alt="" />
                 </MDBNavLinkS>
               </MDBNavbarBrand>
 
@@ -82,14 +83,14 @@ const NavBar = (props) => {
                   </MDBDropdownToggle>
                   <MDBDropdownMenu className="dropdown-default">
                     <MDBNavLink to="/shipping">
-                      <MDBDropdownItem tag="span">Delivery</MDBDropdownItem>
+                      <MDBDropdownItem tag="span">DELIVELY</MDBDropdownItem>
                     </MDBNavLink>
                     <MDBNavLink to="/fandq">
                       <MDBDropdownItem tag="span">FAQs</MDBDropdownItem>
                     </MDBNavLink>
                     <MDBNavLink to="/terms">
                       <MDBDropdownItem tag="span">
-                        Terms & Conditions
+                        TERMS & CONDITIONS
                       </MDBDropdownItem>
                     </MDBNavLink>
                   </MDBDropdownMenu>
@@ -99,10 +100,11 @@ const NavBar = (props) => {
                 <MDBNavLink to="/contact">CONTACT</MDBNavLink>
               </MDBNavItem>
             </MDBNavbarNavS>
-            {/* <MDBNavbarNav right>
+
+            <MDBNavbarNav right>
               <MDBNavItem>
                 <MDBNavLink className="waves-effect waves-light" to="#!">
-                  <MDBIcon fab icon="twitter" />
+                  <MDBIcon icon="search" />
                 </MDBNavLink>
               </MDBNavItem>
 
@@ -112,11 +114,11 @@ const NavBar = (props) => {
                     <MDBIcon icon="shopping-cart" />
                   </MDBDropdownToggle>
                   <MDBDropdownMenu className="dropdown-default">
-                    <MDBDropdownItem href="#!">Cart: 3 Items</MDBDropdownItem>
+                    <MDBDropdownItem href="#!">Cart: 0 Items</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
-            </MDBNavbarNav> */}
+            </MDBNavbarNav>
           </MDBCollapse>
         </MDBNavbar>
         <MDBContainer

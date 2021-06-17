@@ -1,6 +1,6 @@
 import _ from "lodash";
 
-const newItems = [
+const newItems1 = [
   {
     _id: "1",
     img: `${process.env.PUBLIC_URL}/new-items/ni-a.png`,
@@ -35,6 +35,6 @@ const newItems = [
   },
 ];
 
-export const getNewItemsByID = (nid) => _.find(newItems, { _id: nid });
+export const getNewItems1ByID = (nid) => _.find(newItems1, { _id: nid });
 
-export const getNewItems = () => newItems;
+export const getNewItems1 = () => newItems1;

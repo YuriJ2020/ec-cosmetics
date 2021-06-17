@@ -1,13 +1,12 @@
-import React from "react";
+import { React, useEffect } from "react";
 import { MDBContainer, MDBMask, MDBView } from "mdbreact";
 
-import styled from "styled-components";
-
-import TitlePNG from "assets/bg-title.png";
-import Title2PNG from "assets/bg-title2.png";
 import Title4PNG from "assets/bg-title4.png";
 
 const Terms = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <MDBContainer fluid className="p-0">
       <MDBView>
@@ -17,7 +16,7 @@ const Terms = () => {
         </MDBMask>
       </MDBView>
       <MDBContainer className="pb-5">
-        <h2 className="py-5 text-center">Our Agreement & Terms</h2>
+        <h3 className="py-5 text-center">Our Agreement & Terms</h3>
         <div className="d-md-flex">
           <div className="overflow-auto" style={{ maxHeight: "60vh" }}>
             <h4 className="text-center py-5">AGREEMENT TO TERMS</h4>

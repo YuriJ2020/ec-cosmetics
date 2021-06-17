@@ -2,10 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import styled from "styled-components";
+import { MDBBtn, MDBCardImage, MDBView } from "mdbreact";
 
-// import Slider from "react-slick";
-
-import { MDBBtn, MDBCardImage, MDBMask, MDBView } from "mdbreact";
 const MDBBtnS = styled(MDBBtn)`
   color: #607d8b;
   background-color: white;
@@ -20,24 +18,8 @@ const MDBBtnS = styled(MDBBtn)`
 const NewItem = (props) => {
   const detailsPath = `/newitemdetail/${props._id}`;
 
-  // const simpleSlider = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 300,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  // };
-
   return (
     <>
-      {/* <Slider {...simpleSlider} className="m-5">
-        <div>
-          <Link to={detailsPath}>
-            <MDBCardImage src={props.image} alt="" className="mx-auto p-2" />
-          </Link>
-        </div>
-      </Slider> */}
-
       <MDBView hover zoom className="m-3">
         <Link to={detailsPath}>
           <MDBCardImage
@@ -48,7 +30,7 @@ const NewItem = (props) => {
         </Link>
       </MDBView>
 
-      <p className="pt-">{props.title}</p>
+      <p>{props.title}</p>
       <p>
         {props.size} / {props.price}
       </p>

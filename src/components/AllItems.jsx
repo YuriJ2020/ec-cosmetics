@@ -1,18 +1,12 @@
 import { React, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import styled from "styled-components";
-
 import _ from "lodash";
 
 import { getAllItems } from "../services/allItems";
 import AllItem from "./AllItem";
 
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
-
-const Hr = styled.hr`
-  height: 2rem;
-`;
 
 const AllItems = () => {
   useEffect(() => {
@@ -30,7 +24,7 @@ const AllItems = () => {
           </Link>
 
           <h3 className="h2-responsive pt-5">All Items</h3>
-          <Hr />
+          <hr style={{ height: "2rem" }} />
           <MDBRow className="text-center">
             {_.map(getAllItems(), (a) => (
               <MDBCol key={a._id}>

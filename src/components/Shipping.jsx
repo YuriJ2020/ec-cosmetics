@@ -1,13 +1,12 @@
-import React from "react";
+import { React, useEffect } from "react";
 
-import styled from "styled-components";
 import { MDBContainer, MDBMask, MDBView } from "mdbreact";
-
-import TitlePNG from "assets/bg-title.png";
 import Title2PNG from "assets/bg-title2.png";
-import Title3PNG from "assets/bg-title3.png";
 
 const Shipping = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <MDBContainer className="p-0" fluid>

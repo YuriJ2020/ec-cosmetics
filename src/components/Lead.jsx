@@ -1,75 +1,46 @@
 import { Link } from "react-router-dom";
 import React from "react";
 
-import styled from "styled-components";
-import { MDBContainer, MDBBtn } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 
 import ScrollAnimation from "react-animate-on-scroll";
-
-import lipPNG from "assets/bg-1.png";
-
-const MDBContainerS = styled(MDBContainer)`
-  background-image: url(${lipPNG});
-  min-height: 360px;
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: cover;
-  text-align: center;
-  position: relative;
-`;
-
-const H5 = styled.h5`
-  white-space: pre-line;
-  @media (min-width: 1200px) {
-    padding: 0 20rem;
-  }
-  @media (min-width: 768px) and (max-width: 1200px) {
-    padding: 0 10rem;
-  }
-  @media (max-width: 768px) {
-    padding: 0 3rem;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-`;
-
-const MDBBtnS = styled(MDBBtn)`
-  color: #607d8b;
-  background-color: white;
-  border: 2px solid #607d8b;
-  &:hover {
-    color: white;
-    background-color: #607d8b;
-    border: 2px solid #607d8b;
-  }
-`;
+import LeadPNG from "assets/lead.png";
 
 const Lead = () => {
   return (
     <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-      <MDBContainerS fluid>
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            transform: " translateY(-50%)",
-          }}
-        >
-          <h2 className="font-weight-bold pt-4"> - About Grade Organics - </h2>
-          <H5 className="pt-3">
-            Vitamin C is essential for enhancing the skin’s resilience. Suited
-            to use both morning and evening, this potent ingredient offers
-            significant benefits when paired with time and dedication. Vitamin C
-            is essential for enhancing the skin’s resilience. Suited to use both
-            morning and evening, this potent ingredient offers significant
-            benefits when paired with time and dedication.
-          </H5>
-          <div className="py-3">
-            <Link to="/about">
-              <MDBBtnS color="">GO TO ABOUT PAGE</MDBBtnS>
-            </Link>
+      <MDBContainer fluid className="p-5">
+        <MDBContainer style={{ backgroundColor: "#939184", padding: "4rem" }}>
+          <div>
+            <MDBRow>
+              <MDBCol
+                lg="6"
+                className="d-flex flex-column justify-content-center"
+              >
+                <img src={LeadPNG} alt="" className="img-fluid w-100" />
+              </MDBCol>
+              <MDBCol lg="6" className=" text-white">
+                <h2 className="text-center font-weight-bold py-3">
+                  - ABOUT BEWDY ORGANICS -
+                </h2>
+                <h5>
+                  Using certified organic and biodynamic farming methods, we
+                  care for our farm as an integrated, living organism.
+                  Everything we do supports the health and vitality of our farm
+                  and contributes to the vigorous ecosystem of the hills.
+                </h5>
+                <div className="py-2 text-center">
+                  <Link to="/about">
+                    <MDBBtn outline color="white">
+                      GO TO ABOUT PAGE
+                    </MDBBtn>
+                  </Link>
+                </div>
+              </MDBCol>
+            </MDBRow>
           </div>
-        </div>
-      </MDBContainerS>
+        </MDBContainer>
+      </MDBContainer>
     </ScrollAnimation>
   );
 };
