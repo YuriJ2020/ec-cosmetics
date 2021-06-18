@@ -33,7 +33,7 @@ import NotFound from "components/NotFound";
 const CustomSwitch = () => (
   <>
     <Switch>
-      <Route exact path="/">
+      <Route exact path="/assignment-bewdy-organics/">
         <ScrollAnimation animateIn="fadeIn">
           <Jumbo />
           <Lead />
@@ -47,66 +47,66 @@ const CustomSwitch = () => (
         </ScrollAnimation>
       </Route>
 
-      <Route path="/about">
+      <Route path="/assignment-bewdy-organics/about">
         <div style={{ paddingTop: "5rem" }}>
           <About />
         </div>
       </Route>
 
-      <Route path="/fandq">
+      <Route path="/assignment-bewdy-organics/fandq">
         <div style={{ paddingTop: "6rem" }}>
           <FandQ />
         </div>
       </Route>
 
-      <Route path="/terms">
+      <Route path="/assignment-bewdy-organics/terms">
         <div style={{ paddingTop: "7rem" }}>
           <Terms />
         </div>
       </Route>
 
-      <Route path="/contact">
+      <Route path="/assignment-bewdy-organics/contact">
         <div style={{ paddingTop: "6rem" }}>
           <Contact />
         </div>
       </Route>
 
-      <Route path="/shipping">
+      <Route path="/assignment-bewdy-organics/shipping">
         <div style={{ paddingTop: "7rem" }}>
           <Shipping />
         </div>
       </Route>
 
       {/* AllItems Routes */}
-      <Route path="/allitems">
+      <Route path="/assignment-bewdy-organics/allitems">
         <div style={{ paddingTop: "6rem" }}>
           <AllItems />
         </div>
       </Route>
-      <Route path="/itemdetail/:aid">
+      <Route path="/assignment-bewdy-organics/itemdetail/:aid">
         <div style={{ paddingTop: "8rem" }}>
           <ItemDetail />
         </div>
       </Route>
 
       {/* NewItems Routes */}
-      <Route path="/newitems/">
+      <Route path="/assignment-bewdy-organics/newitems/">
         <div style={{ paddingTop: "6rem" }}>
           <NewItems />
         </div>
       </Route>
-      <Route path="/newitemdetail/:nid">
+      <Route path="/assignment-bewdy-organics/newitemdetail/:nid">
         <div style={{ paddingTop: "8rem" }}>
           <NewItemDetail />
         </div>
       </Route>
 
-      <Route exact path="/notfound">
+      <Route exact path="/assignment-bewdy-organics/notfound">
         <div style={{ paddingTop: "9rem" }}>
           <NotFound />
         </div>
       </Route>
-      <Route path="/">
+      <Route path="/assignment-bewdy-organics/">
         <Redirect to="/notfound" />
       </Route>
     </Switch>
