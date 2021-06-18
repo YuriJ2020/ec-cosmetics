@@ -29,6 +29,7 @@ const PS = styled.p`
 `;
 
 const MDBRowS = styled(MDBRow)`
+  color: #73595a;
   @media (min-width: 768px) {
     padding: 0 10rem;
   }
@@ -57,7 +58,9 @@ const CleanCode = () => {
           </PS>
           <MDBRowS>
             <MDBCol>
-              <ImgS src={IconVSVG} className="img-fluid" alt="" />
+              <div>
+                <ImgS src={IconVSVG} className="img-fluid" alt="" />
+              </div>
               <h5 className="py-4 font-weight-bold">VEGAN</h5>
             </MDBCol>
 

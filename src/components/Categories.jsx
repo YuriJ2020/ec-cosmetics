@@ -34,7 +34,7 @@ const Categories = () => {
                 <MDBView zoom className="w-100" waves>
                   <img src={Cate1PNG} className="img-fluid" alt="" />
                   <MDBMask className="flex-center" overlay="white-slight">
-                    <h3 className="white-text">SKIN CARE</h3>
+                    <h2 className="white-text">SKIN CARE</h2>
                   </MDBMask>
                 </MDBView>
               </Link>
@@ -43,7 +43,7 @@ const Categories = () => {
               <MDBView zoom className="w-100" waves>
                 <img src={Cate2PNG} className="img-fluid" alt="" />
                 <MDBMask className="flex-center" overlay="stylish-light">
-                  <h3 className="text-white">MOISUTURE CREAMS</h3>
+                  <h2 className="text-white">MOISUTURE CREAMS</h2>
                 </MDBMask>
               </MDBView>
             </MDBCol>
@@ -52,7 +52,7 @@ const Categories = () => {
               <MDBView zoom className="w-100 mx-auto" waves>
                 <img src={Cate3PNG} className="img-fluid" alt="" />
                 <MDBMask className="flex-center" overlay="white-slight">
-                  <h3 className="white-text">DIFFUSERS</h3>
+                  <h2 className="white-text">DIFFUSERS</h2>
                 </MDBMask>
               </MDBView>
             </MDBCol>
@@ -61,7 +61,7 @@ const Categories = () => {
                 <img src={Cate4PNG} className="img-fluid" alt="" />
 
                 <MDBMask className="flex-center" overlay="white-slight">
-                  <h3 className="white-text">BODY SOAPS</h3>
+                  <h2 className="white-text">BODY SOAPS</h2>
                 </MDBMask>
               </MDBView>
             </MDBCol>

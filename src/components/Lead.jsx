@@ -9,9 +9,9 @@ import LeadPNG from "assets/lead.png";
 const Lead = () => {
   return (
     <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-      <MDBContainer fluid className="p-5">
-        <MDBContainer style={{ backgroundColor: "#939184", padding: "4rem" }}>
-          <div>
+      <MDBContainer fluid className="py-5">
+        <MDBContainer style={{ backgroundColor: "#939184" }}>
+          <div className="p-5">
             <MDBRow>
               <MDBCol
                 lg="6"
@@ -21,7 +21,7 @@ const Lead = () => {
               </MDBCol>
               <MDBCol lg="6" className=" text-white">
                 <h2 className="text-center font-weight-bold py-3">
-                  - ABOUT BEWDY ORGANICS -
+                  ABOUT BEWDY ORGANICS
                 </h2>
                 <h5>
                   Using certified organic and biodynamic farming methods, we
@@ -32,7 +32,7 @@ const Lead = () => {
                 <div className="py-2 text-center">
                   <Link to="/about">
                     <MDBBtn outline color="white">
-                      GO TO ABOUT PAGE
+                      KNOW
                     </MDBBtn>
                   </Link>
                 </div>

@@ -43,7 +43,7 @@ const Footer = () => {
     <>
       <FooterContainer>
         <div className=" footer-middle">
-          <MDBContainerS fluid className="py-3">
+          <MDBContainerS fluid className="pt-5">
             <MDBRow className="justify-content-around">
               <MDBCol md="2" sm="6">
                 <Link to="/">
@@ -130,7 +130,7 @@ const Footer = () => {
               </MDBCol>
             </MDBRow>
             <hr className="white" />
-            <p className="py-4 text-white text-center font-weight-bold">
+            <p className="py-5 text-white text-center font-weight-bold">
               Copyright &copy;{new Date().getFullYear()}&nbsp; Bewdy Organics
             </p>
           </MDBContainerS>

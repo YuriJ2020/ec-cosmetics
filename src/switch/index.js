@@ -40,6 +40,7 @@ const CustomSwitch = () => (
           <NewItems />
           <CleanCode />
           <Categories />
+
           <Video />
           <MailList />
           <Instagram />

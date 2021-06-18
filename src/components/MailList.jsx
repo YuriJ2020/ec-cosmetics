@@ -46,7 +46,7 @@ const MailList = () => {
           strength={240}
           style={{ backgroundPosition: "center" }}
         >
-          <MDBContainer className="text-center py-5">
+          <MDBContainer className="text-center py-4">
             {/* Sign Form */}
             <h2 className="py-3 font-weight-bold">STAY IN THE LOOP!</h2>
             <h4 className="py-2">Join & Recieve member's benefits.</h4>

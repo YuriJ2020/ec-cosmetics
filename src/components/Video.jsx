@@ -10,16 +10,18 @@ const Video = () => {
     <>
       <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
         <MDBContainer fluid className="p-0">
-          <ReactPlayer
-            className="react-player"
-            url="../videos/video-comp-2.mp4"
-            width="100%"
-            height="100%"
-            controls={false}
-            muted={true}
-            playing={false}
-            loop={true}
-          />
+          <div className="py-3">
+            <ReactPlayer
+              className="react-player"
+              url="../videos/video-comp-2.mp4"
+              width="100%"
+              height="100%"
+              controls={false}
+              muted={true}
+              playing={true}
+              loop={false}
+            />
+          </div>
         </MDBContainer>
       </ScrollAnimation>
     </>
