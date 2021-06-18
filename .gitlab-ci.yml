@@ -1,0 +1,32 @@
+stages:
+  - prepare
+  # - test
+  - pages
+
+image: node
+
+cache:
+  paths:
+    - node_modules
+
+prepare:
+  stage: prepare
+  script:
+    - yarn install
+
+# test:
+#   stage: test
+#   script:
+#     - yarn test
+
+pages:
+  stage: pages
+  script:
+    - yarn build
+    - rm -rf public
+    - mv build public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
